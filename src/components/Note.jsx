@@ -3,13 +3,13 @@ import React from "react";
 
 
 
-function Note() {
+function Note(props) {
     const d = new Date();
     let year = d.getFullYear();
 
     return (<div className="note">
-        <h1>Title</h1>
-        <p>para</p>
+        <h1>{props.Title}</h1>
+        <p>{props.para}</p>
     </div>
     );
     
