@@ -1,18 +1,21 @@
 import React from "react";
 
-
-
-
 function Note(props) {
-    const d = new Date();
-    let year = d.getFullYear();
 
-    return (<div className="note">
-        <h1>{props.Title}</h1>
-        <p>{props.para}</p>
-    </div>
-    );
-    
+  function removeitem(event){
+    event.preventDefault();
+    props.deleteItem(props.id);
   }
+
+
+
+  return (
+    <div className="note">
+      <h1>{props.title}</h1>
+      <p>{props.content}</p>
+      <button onClick={removeitem}>DELETE</button>
+    </div>
+  );
+}
 
 export default Note;
