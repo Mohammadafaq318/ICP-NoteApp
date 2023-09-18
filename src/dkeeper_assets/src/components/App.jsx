@@ -6,10 +6,8 @@ import CreateArea from "./CreateArea";
 
 function App() {
 
-  const [Notes, setNotes] = React.useState([{
-    title: "Noteasfasf title",
-    content:"Note content"
-  }]);
+  const [Notes, setNotes] = React.useState([]);
+
 
   function addNote(note){
     setNotes((prevItems) => [...prevItems, note]);
